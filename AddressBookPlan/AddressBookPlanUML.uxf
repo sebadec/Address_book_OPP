@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>161</x>
+      <y>441</y>
+      <w>126</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>User
+--
+- userID: Intiger
+- name: String
+- password: String
+--
++ setUserID() : Void
++ setName() : Void
++ setPassword() : Void
++ getUserID() : Intiger
++ getName() : String
++ getPassword() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>168</x>
+      <y>630</y>
+      <w>392</w>
+      <h>238</h>
+    </coordinates>
+    <panel_attributes>FileWithUsers
+--
+- FILE_NAME_WITH_USERS: const string 
+- ReplaceUserDataWithDataLinesSeparatedByVerticalDashes() : String
+- getUserData() : User
+--
++ FileWithUsers()
++ addUserToFile() : void
++ loadUserFromFile() : vector &lt;User&gt;
++ saveAllUsersToFile() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>644</x>
+      <y>630</y>
+      <w>217</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>AuxiliaryMethods
+--
+--
++ convertIntToString() : String
++ loadLines() : String
++ convertStringToInt() : Intiger
++ getNumber(): String
++ loadChar(): char
++ loadIntegerNumber(): Intiger
++ selectOptionsFromEditMenu(): char
++ selectOptionsFromMainMenu(): char
++ selectOptionsFromUserMenu(): char</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>945</x>
+      <y>364</y>
+      <w>294</w>
+      <h>217</h>
+    </coordinates>
+    <panel_attributes>RecipientManager
+--
+- LOGGED_USER_ID : const Intiger
+- Recipients: vector &lt;Recipient&gt;
+- FileWithRecipients:fileWithRecipients
+- setNewRecipientData() : Recipient
+- displayRecipientData() : void
+- updateSelectedRecipientData() : void
+- displayNumberOfSearchedRecipients() : void
+--
++ RecipientManager()
++ addRecipient() : Intiger
++ displayAllRecipients() : void
++ loadRecipientOfLoggedUser() : Void
++ deleteRecipient() : void
++ giveSelectedRecipientId() : Intiger
++ editRecipient() : void
++ searchRecipientByName() : void
++ searchRecipientBySurname() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>945</x>
+      <y>623</y>
+      <w>336</w>
+      <h>238</h>
+    </coordinates>
+    <panel_attributes>FileWithRecipients
+--
+- FILE_NAME_WITH_RECIPENTS : const string
+- lastRecipientId : intiger
+- ReplaceRecipientDataWithDataLinesSeparatedByVerticalDashes() : String
+- getNumber() : string
+- getRecipientData() : Adresat
+- getUserIdFromDataSeparatedByVerticalDashes() : intiger 
+- getRecipientIdFromDataSeparatedByVerticalDashes() : intiger
+--
++ FileWithRecipients()
++ addRecipientToFile() : bool
++ loadRecipientsOfLoggedUserFromFile : vector &lt;Recipient&gt;
++ getLastRecipientId() : intiger
++ deleteLineFromFile(): Void
++ deleteFile(): Void
++ changeFileName(): Void
++ add(): Void
++ editSelectedLinesInFile(): Void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1295</x>
+      <y>315</y>
+      <w>203</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>Recipient
+--
+- recipientId : Intiger
+- userId: Intiger
+- name: String
+- surname: String
+- telephone: String
+- email: String
+- address: String
+--
++ setRecipientId() : Void
++ setUserId() : Void
++ setName() : Void
++ setSurname() : Void
++ setTelephoneNumber() : Void
++ setEmail() : Void
++ setAddress() : Void
++ getRecipientId() : Intiger
++ getUserId() : Intiger
++ getName() : String
++ getSurname() : String
++ getTelephoneNumber() : String
++ getEmail() : String
++ getAddress() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>364</y>
+      <w>238</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>UserMenager
+--
+- loggedUserId : Intiger
+- users : vector &lt;User&gt;
+- FileWithUsers : fileWithUsers
+- setNewUserData() : Uzytkownik
+- getNewUserId() : Intiger
+- ifLoginExists() : Bool
+--
++ UserMenager()
++ userRegistration() : void
++ displayAllUsers() : void
++ userLogging() : Intiger
++ changePasswordOfTheLoggedUser : void
++ userLogout() : void
++ ifUserIsLogged(): void
++ getLoggedUserId() : Intiger</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>609</x>
+      <y>63</y>
+      <w>294</w>
+      <h>238</h>
+    </coordinates>
+    <panel_attributes>AddressBook
+--
+- UserMenager : userMenager
+- RecipientManager : *recipientManager
+- FILE_NAME_WITH_RECIPENTS : const string 
+--
++ AddressBook()
++ ~AddressBook()
++ userRegistration() : Void
++ displayAllUsers() : Void
++ userLogging() : Void
++ changePasswordOfLoggedUser() : Void
++ wylogowanieUzytkownika() : Void
++ userLogout() : Void
++ loadRecipientsOfLoggedUserFromFile() : Void
++ giveSelectedRecipientId() : Void
++ editRecipient() : Void
++ searchRecipientByName() : Void
++ searchRecipientBySurname() : Void
++ ifUserIsLogged(): bool
++ displayAllRecipients() : Void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>644</x>
+      <y>805</y>
+      <w>217</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>TextFile
+--
+FILE_NAME: const string
+--
++ TextFile()
++ getFileName(): String
++ ifFileIsEmpty(): Bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>175</y>
+      <w>203</w>
+      <h>203</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>270.0;10.0;10.0;10.0;10.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>896</x>
+      <y>175</y>
+      <w>203</w>
+      <h>203</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;270.0;10.0;270.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>749</x>
+      <y>434</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>280.0;10.0;10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1232</x>
+      <y>455</y>
+      <w>77</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1099</x>
+      <y>574</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>546</x>
+      <y>567</y>
+      <w>413</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>570.0;160.0;520.0;160.0;520.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1274</x>
+      <y>574</y>
+      <w>112</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;220.0;140.0;220.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>504</y>
+      <w>49</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>581</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>217</x>
+      <y>567</y>
+      <w>21</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>553</x>
+      <y>686</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>854</x>
+      <y>693</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>553</x>
+      <y>812</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>854</x>
+      <y>812</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+</diagram>
