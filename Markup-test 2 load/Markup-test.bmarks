@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<BrowseTracker_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="256" topLine="0" />
+		<BrowseMarks positions="240" />
+	</File>
+	<File name="Markup.h" open="1" top="0" tabpos="2">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="Markup.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="324" topLine="0" />
+		<BrowseMarks positions="" />
+	</File>
+</BrowseTracker_layout_file>
